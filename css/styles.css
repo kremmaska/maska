@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@font-face {
+  font-family: AstroSpace;
+}
+
+/* ==== Variable color principal ==== */
+:root{
+  --color-primario: #ff2693;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23ff2693' fill-opacity='0.1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+} 
+
+header {
+  background-color: #000; /* Color navbar */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+h1{
+  color: #fff; /* Color titulos albums */
+}
+
+img{
+  border-radius: 8px; /* Borde redondeado imagen */
+  max-width: 168px;
+  border: #222 0.3em solid; /* Borde */
+  transition: border 0.4s;
+}
+
+img:hover{
+  border: var(--color-primario) 0.3em solid; /* Borde hover */
+  transition: border 0s; /* Transicion hover borde */
+}
+
+span{
+  color: var(--color-primario); /* Color letras dentro de span */
+}
+
+p{
+  font-size: 18px; /* Tamaño <p> */
+  color: #fff;
+}
+
+hr{
+  border-color: transparent; 
+}
+
+.artista{
+  max-width: 115px;
+  border-radius: 100%;
+  border: transparent;
+}
+
+.artista:hover{
+  border: transparent;
+}
+
+.main-nav {
+  height: 75px; /* Altura background navbar */
+}
+
+/* ==== Logo ==== */
+.logo {
+  color: var(--color-primario); /* Color */
+  line-height: 75px; /* Altura */
+  font-size: 30px; /* Tamaño fuente */
+  font-weight: bold; 
+  text-decoration: none; /* Desactiva subrayado */
+  margin-left: 30px; /* Posicion horizontal */
+  font-family: "AstroSpace", sans-serif;
+}
+
+.logo:hover{
+  color: #fff;
+  line-height: 75px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 30px;
+  font-family: "AstroSpace", sans-serif;
+  transition: 0.1s;
+}
+
+/* ==== <a> ==== */
+.navlinks {
+  list-style: none;
+  float: right;
+  line-height: 75px; /* Altura */
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks li {
+  display: inline-block;
+  margin: 0 20px; /* Separacion */
+}
+
+.navlinks li a {
+  color: #fff; /* Color letras */
+  text-decoration: none; /* Desactiva subrayado */
+  font-size: 18px; /* Tamaño fuente */
+  text-transform: uppercase; 
+  transition: all 0.1s linear 0s; /* Desvanecimiento de color hover */
+}
+
+
+.navlinks li a:hover {
+  color: var(--color-primario); /* Color hover */
+  transition: all 0.1s linear 0s;
+}
+
+/* ==== <a> boton con background */
+li a.contact {
+  background-color: var(--color-primario); /* color fondo */
+  color: #fff; /* Color letras */
+  padding: 10px 20px; /* Ancho y largo background */
+  border-radius: 10px; /* Borde redondeado */
+  transition: all 0.1s linear 0s; /* Desvanecimiento de color hover */
+}
+
+li a.contact:hover {
+  background-color: #fff; /* Color hover background */
+  color: #000; /* Color hover letras */
+  border-bottom: none; 
+  transition: all 0.1s linear 0s; /* Transicion */
+}
+
+.boton{
+  font-size: 18px;
+  text-decoration: none;
+  background-color: var(--color-primario);
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 10px;
+  transition: all 0.2s linear 0s;
+}
+
+.boton:hover {
+  background-color: #fff;
+  color: #111;
+  border-bottom: none;
+}
+
+/* ==== Sandwich boton responsive ==== */
+.menu-btn {
+  color: var(--color-primario); /* Color */
+  font-size: 25px; /* Tamaño */
+  float: right;
+  line-height: 75px; /* Altura */
+  margin-right: 40px;
+  cursor: none; /* ver hitbox al darle click [por defecto "pointer"] */
+  display: none;
+}
+
+#isChecked {
+  display: none;
+}
+
+.center {
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+*::selection { /* color al seleccionar texto */
+  background: var(--color-primario) ;
+  color: #fff;
+}
+
+.container{
+  position: relative;
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.contact-box{
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.right{
+  padding: 25px 0px;
+}
+
+h2{
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+h2:after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.container span{
+  color: var(--color-primario);
+}
+
+.field{
+  width: 85%;
+  outline: none;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  transition: .2s;
+  border-radius: 7px;
+}
+
+.field:hover{
+  background-color: var(--color-primario);
+}
+
+.btn{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primario);
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 7px;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.field:focus{
+    border: 2px solid var(--color-primario);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+  .field{
+    width: 85%;
+    }
+}
+
+/*============ Footer ============*/
+.footer {
+  background: #000;
+}
+
+.footer .credit {
+  text-align: center;
+  padding-top: 18px;
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #fff;
+  border-top: 0.1rem solid var(--color-primario);
+}
+
+.footer .credit span {
+  color: var(--color-primario);
+}
+
+/*============ Scrollbar ============*/
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: var(--color-primario);
+}
+
+@media (max-width: 800px) {
+  .navlinks {
+    position: fixed;
+    width: 60%; /* Que tanto a la izquierda se desplegara */
+    height: 23vh;
+    border-radius: 7px;
+    text-align: center;
+    background: #000; /* Color background menu desplegable */
+    right: -100%;
+    transition: all 0.3s; /* Velocidad transicion despliegue */
+  }
+
+  .navlinks li {
+    display: block;
+  }
+
+  .navlinks li a {
+    font-size: 20px; /* Tamaño fuente */ 
+  }
+
+  .navlinks li a:hover {
+    border-bottom: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+
+  #isChecked:checked ~ .navlinks {
+    right: 0;
+  }
+
+  .center{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .logo {
+    margin-left: 15px;
+    font-size: 25px;
+  }
+
+  .menu-btn {
+    margin-right: 15px;
+    font-size: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
